@@ -1,0 +1,114 @@
+.main-footer {
+  position: relative;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: #ffffff;
+
+  background-color: #000000;
+}
+
+.main-footer__toggle-menu {
+  position: absolute;
+  top: 0px;
+  left: 239px;
+
+  width: 21px;
+  height: 14px;
+}
+ // hover toggle-menu--close
+.main-footer__toggle-menu:hover .main-footer__toggle-menu--close {
+    background-color: red;
+}
+
+.main-footer__toggle-menu:hover .main-footer__toggle-menu--close::after {
+    background-color: red;
+}
+
+.main-footer__toggle-menu:hover .main-footer__toggle-menu--close::before {
+    background-color: red;
+}
+// focus toggle-menu--close
+.main-footer__toggle-menu:focus .main-footer__toggle-menu--close {
+    background-color: red;
+}
+
+.main-footer__toggle-menu:focus .main-footer__toggle-menu--close::after {
+    background-color: red;
+}
+
+.main-footer__toggle-menu:focus .main-footer__toggle-menu--close::before {
+    background-color: red;
+}
+
+// hover toggle-menu--open
+.main-footer__toggle-menu:hover .main-footer__toggle-menu--open {
+    background-color: red;
+}
+
+.main-footer__toggle-menu:hover .main-footer__toggle-menu--open::before {
+    background-color: red;
+}
+
+// -----------------------------------------------------------------------
+.main-footer__toggle-menu--close {
+  position: absolute;
+  top: 6px;
+  left: 0;
+
+  width: 21px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.main-footer__toggle-menu--close::before {
+  content: "";
+
+  position: absolute;
+  top: -6px;
+
+  width: 21px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.main-footer__toggle-menu--close::after {
+  content: "";
+
+  position: absolute;
+  top: 6px;
+
+  width: 21px;
+  height: 2px;
+
+  background-color: #ffffff;
+}
+
+.main-footer__toggle-menu--open {
+  position: absolute;
+  top: 6px;
+  left: 1px;
+
+  display: block;
+  width: 20px;
+  height: 2px;
+
+  background-color: #ffffff;
+  transform: rotate(45deg);
+}
+
+.main-footer__toggle-menu--open::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: #ffffff;
+  transform: rotate(-90deg);
+}
