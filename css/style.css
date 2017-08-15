@@ -376,9 +376,6 @@ img {
 .main-navigation__item a:hover {
   color: red;
 }
-.main-navigation__item a:focus {
-  color: red;
-}
 .main-navigation__item a:active {
   opacity: 0.5;
 }
@@ -488,10 +485,6 @@ img {
   color: red;
   fill: red;
 }
-.office-phone__link:focus {
-  color: red;
-  fill: red;
-}
 .office-phone__link:active {
   opacity: 0.5;
 }
@@ -534,7 +527,7 @@ img {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .promo-block-services {
-    background-image: url(../../img/services-movers-mobile-bg@2x.jpg);
+    background-image: url(../img/services-movers-mobile-bg@2x.jpg);
   }
 }
 .social-icons {
@@ -645,12 +638,38 @@ img {
 .btn__order--mobile:hover {
   background-color: #000000;
 }
-.btn__order--mobile:focus {
-  background-color: #000000;
-  outline: none;
-}
 .btn__order--mobile:active {
   background-color: rgba(0, 0, 0, 0.5);
+}
+.btn__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  border: none;
+  background-color: transparent;
+}
+.btn__close::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  width: 20px;
+  height: 2px;
+  background-color: red;
+  transform: rotate(45deg);
+}
+.btn__close::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  width: 20px;
+  height: 2px;
+  background-color: red;
+  transform: rotate(-45deg);
 }
 .promo-block-office-movies {
   margin-bottom: 30px;
@@ -675,14 +694,14 @@ img {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .promo-block-appartment-movies {
-    background-image: url(../../img/appartament-movies-mobile-bg@2x.jpg);
+    background-image: url(../img/appartament-movies-mobile-bg@2x.jpg);
   }
 }
 .promo-block-warehousing {
   margin-bottom: 30px;
   padding-top: 105px;
   padding-bottom: 34px;
-  background-image: url(../../img/warehousing-mobile-bg@1x.jpg);
+  background-image: url(../img/warehousing-mobile-bg@1x.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -968,27 +987,23 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
 }
 .modal {
-  position: relative;
-  display: none;
-}
-.modal__window {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 40px;
   padding-right: 40px;
   color: #000000;
+  border: none;
   background-color: #ffffff;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7), inset 0 5px 0 red;
 }
 .modal__title {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
@@ -1000,7 +1015,7 @@ img {
   font-weight: normal;
   font-size: 10px;
 }
-.modal__sublime {
+.modal__submit {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -1015,13 +1030,37 @@ img {
   border-radius: 50px;
   background-color: red;
 }
-.modal__overlay {
+.modal__submit:hover {
+  background-color: #000000;
+}
+.modal__submit:active {
+  opacity: 0.5;
+}
+dialog::-webkit-backdrop {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+dialog + .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
 .field-name {
@@ -1053,4 +1092,13 @@ img {
 .field-mail__input {
   width: 100%;
   height: 25px;
+}
+.field-text {
+  font-size: 12px;
+  line-height: 24px;
+}
+.field-text__input {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
 }

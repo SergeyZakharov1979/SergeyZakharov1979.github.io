@@ -1,14 +1,8 @@
 .modal {
-  position: relative;
-  display: none;
-}
-
-.modal__window {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
 
   width: 100%;
   padding-top: 15px;
@@ -18,6 +12,7 @@
 
   color: #000000;
 
+  border: none;
   background-color: #ffffff;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7),
               inset 0 5px 0 red;
@@ -25,7 +20,7 @@
 
 .modal__title {
   display: block;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   font-weight: bold;
   font-size: 14px;
@@ -40,7 +35,7 @@
   font-size: 10px;
 }
 
-.modal__sublime {
+.modal__submit {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -56,14 +51,32 @@
   border: none;
   border-radius: 50px;
   background-color: red;
+
+  &:hover {
+    background-color: #000000;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
-.modal__overlay {
+dialog::backdrop {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 5;
   width: 100%;
   height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+dialog + .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 5;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }

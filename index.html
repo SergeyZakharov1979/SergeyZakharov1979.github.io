@@ -5,6 +5,7 @@
 		<title>porters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dialog-polyfill.css">
 	</head>
 	<body>
     <svg style="display: none;">
@@ -131,6 +132,7 @@
     </symbol>
 
     </svg>
+    <a name="main-header"></a>
 		<header class="main-header">
       <div class="container">
   		  <h1 class="main-header__title">Грузчики Новосибирск</h1>
@@ -163,7 +165,7 @@
 			</nav>
       <div class="container">
   			<div class="office-phone">
-  				<a class="office-phone__link" href="#">
+  				<a class="office-phone__link" href="tel:+79139851198">
   					<span class="office-phone__icon">
               <svg class="phone-icon" width="30" height="30">
                 <use id="phone-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-icon"></use>
@@ -216,17 +218,17 @@
     				<h2 class="promo__title">Услуги грузчиков<br> <span>в Новосибирске</span></h2>
     				<p class="promo__cost">от 200 рублей/час</p>
     			</div>
-    			<button class="btn btn__order--mobile">Заказать</button>
+    			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
       <a name="promo-block-office-movies"></a>
   		<article class="promo-block-office-movies">
         <div class="container">
     			<div class="promo__list">
-    				<h2 class="promo__title">Офисный переезд<br> <span>в Новосибирс<span class="promo__title-invert">к</span>е</span></h2>
+    				<h2 class="promo__title">Офисный переезд<br> <span>в Новосибирcке</span></h2>
     				<p class="promo__cost">от 250 рублей/час</p>
     			</div>
-    			<button class="btn btn__order--mobile">Заказать</button>
+    			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
       <a name="promo-block-appartment-movies"></a>
@@ -236,17 +238,17 @@
     				<h2 class="promo__title">Квартирный переезд<br> <span>в Новосибирске</span></h2>
     				<p class="promo__cost">от 200 рублей/час</p>
     			</div>
-    			<button class="btn btn__order--mobile">Заказать</button>
+    			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
       <a name="promo-block-warehousing"></a>
   		<article class="promo-block-warehousing">
         <div class="container">
     			<div class="promo__list">
-    				<h2 class="promo__title">Работа на <span class="promo__title-invert">скла</span>де<br> <span>в <span class="promo__title-invert">Нов</span>осибирске</span></h2>
+    				<h2 class="promo__title">Работа на складе<br> <span>в Новосибирске</span></h2>
     				<p class="promo__cost">от 200 рублей/час</p>
     			</div>
-    			<button class="btn btn__order--mobile">Заказать</button>
+    			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
       <a name="about-us-block"></a>
@@ -387,14 +389,12 @@
   			</div>
       </div>
 		</footer>
-    <script src="js/script.js"></script>
-    <a class="arrow-up-to-start-document" href="index.html">
+    <a class="arrow-up-to-start-document" href="#main-header">
       <svg width="40" height="40">
         <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-up"></use>
       </svg>
     </a>
-    <article class="modal-callback">
-      <div class="modal-callback__overlay"></div>
+    <dialog class="modal-callback">
       <div class="modal-callback__window">
         <h2 class="modal-callback__title">Заказать<br> обратный звонок</h2>
         <form class="modal-callback__form" action="#" method="GET">
@@ -413,28 +413,28 @@
         </p>
         <p class="modal-callback__footnote">Мы Вам перезвоним в течении одной минуты</p>
       </div>
-    </article>
-    <article class="modal">
-      <div class="modal__overlay"></div>
-      <div class="modal__window">
-        <h2 class="modal__title">Оставить заявку</h2>
-        <form class="modal__form" action="mailto:2131198@mail.ru" enctype="text/plain" method="GET">
-          <label class="field-name">
-            Введите Имя:*
-            <input class="field-name__input" type="text">
-          </label>
-          <label class="field-mail">
-            Введите E-mail:
-            <input class="field-mail__input" type="email">
-          </label>
-          <label class="field-phone">
-            Введите номер телефона:*
-            <input class="field-phone__input" type="text">
-          </label>
-          <button class="modal__sublime">Заказать звонок</button>
-        </form>
-        <p class="modal__footnote">Мы Вам перезвоним в течении одной минуты</p>
-      </div>
-    </article>
+    </dialog>
+    <dialog class="modal">
+      <h2 class="modal__title">Оставить заявку</h2>
+      <button class="btn btn__close" type="button">Закрыть</button>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="dialog">
+        <label class="field-name">
+          Ваше Имя:*
+          <input class="field-name__input" type="text">
+        </label>
+        <label class="field-phone">
+          Ваш номер телефона:*
+          <input class="field-phone__input" type="text">
+        </label>
+        <label class="field-text">
+          Напишите текст заявки:
+          <textarea class="field-text__input"></textarea>
+        </label>
+        <button class="modal__submit" type="submit">Оставить заявку</button>
+      </form>
+      <p class="modal__footnote">*Поля обязательны для заполнения</p>
+    </dialog>
+    <script src="js/dialog-polyfill.js"></script>
+    <script src="js/script.js"></script>
 	</body>
 </html>

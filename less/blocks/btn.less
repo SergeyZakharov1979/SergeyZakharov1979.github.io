@@ -24,12 +24,47 @@
     background-color: #000000;
   }
 
-  &:focus {
-    background-color: #000000;
-    outline: none;
-  }
-
   &:active {
     background-color: rgba(0, 0, 0, 0.5);
   }
+}
+
+.btn__close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+
+  border: none;
+  background-color: transparent;
+}
+
+.btn__close::before {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: 0px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: red;
+  transform: rotate(45deg);
+}
+
+.btn__close::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  right: 0px;
+
+  width: 20px;
+  height: 2px;
+
+  background-color: red;
+  transform: rotate(-45deg);
 }

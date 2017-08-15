@@ -51,3 +51,35 @@ footerToggleMenu.addEventListener('click', function(event){
     footerMobileMenu.classList.add('main-navigation--footer-off');
   }
 });
+
+// modal
+var btnOrder = document.querySelectorAll('.btn__order-js');
+var modal = document.querySelector('.modal');
+var btnClose = modal.querySelector('.btn__close');
+dialogPolyfill.registerDialog(modal);
+var form = modal.querySelector('.modal__form');
+var fieldName = modal.querySelector('.field-name__input');
+
+btnOrder.forEach(function(item, i) {
+  item.onclick = function(event) {
+    event.preventDefault();
+    modal.showModal();
+    fieldName.focus();
+  };
+});
+
+window.onclick = function(event) {
+  event.preventDefault();
+  if (event.keyCode === 27) {
+    modal.close();
+  }
+};
+
+btnClose.onclick = function(event) {
+  event.preventDefault();
+  modal.close();
+};
+
+
+
+

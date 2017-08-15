@@ -33,7 +33,8 @@ module.exports = function(grunt) {
         bsFiles: {
           src: [
             "*.html",
-            "css/*.css"
+            "css/*.css",
+            "js/*.js"
           ]
         },
         options: {
