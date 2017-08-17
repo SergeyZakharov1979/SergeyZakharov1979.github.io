@@ -5,7 +5,6 @@
 		<title>porters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/dialog-polyfill.css">
 	</head>
 	<body>
     <svg style="display: none;">
@@ -394,7 +393,7 @@
         <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-up"></use>
       </svg>
     </a>
-    <dialog class="modal-callback">
+    <div class="modal-callback">
       <div class="modal-callback__window">
         <h2 class="modal-callback__title">Заказать<br> обратный звонок</h2>
         <form class="modal-callback__form" action="#" method="GET">
@@ -413,28 +412,30 @@
         </p>
         <p class="modal-callback__footnote">Мы Вам перезвоним в течении одной минуты</p>
       </div>
-    </dialog>
-    <dialog class="modal">
+    </div>
+    <div class="modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__dialog">
       <h2 class="modal__title">Оставить заявку</h2>
-      <button class="btn btn__close" type="button">Закрыть</button>
-      <form class="modal__form" action="https://echo.htmlacademy.ru" method="dialog">
+      <a class="btn btn__close" href="#close">Закрыть</a>
+      <form class="modal__form" action="https://echo.htmlacademy.ru" method="GET">
         <label class="field-name">
           Ваше Имя:*
-          <input class="field-name__input" type="text">
+          <input class="field-name__input" type="text" name="name-field" required>
         </label>
         <label class="field-phone">
           Ваш номер телефона:*
-          <input class="field-phone__input" type="text">
+          <input class="field-phone__input" type="text" name="telephone-field" required>
         </label>
         <label class="field-text">
           Напишите текст заявки:
-          <textarea class="field-text__input"></textarea>
+          <textarea class="field-text__input" name="order-field"></textarea>
         </label>
         <button class="modal__submit" type="submit">Оставить заявку</button>
       </form>
       <p class="modal__footnote">*Поля обязательны для заполнения</p>
-    </dialog>
-    <script src="js/dialog-polyfill.js"></script>
+    </div>
+    </div>
     <script src="js/script.js"></script>
 	</body>
 </html>

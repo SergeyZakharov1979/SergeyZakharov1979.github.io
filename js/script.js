@@ -54,32 +54,50 @@ footerToggleMenu.addEventListener('click', function(event){
 
 // modal
 var btnOrder = document.querySelectorAll('.btn__order-js');
-var modal = document.querySelector('.modal');
+var modal = document.querySelector('.modal__dialog');
 var btnClose = modal.querySelector('.btn__close');
-dialogPolyfill.registerDialog(modal);
-var form = modal.querySelector('.modal__form');
+var overlay = document.querySelector('.modal__overlay');
 var fieldName = modal.querySelector('.field-name__input');
 
 btnOrder.forEach(function(item, i) {
-  item.onclick = function(event) {
+  item.addEventListener('click', function(event) {
     event.preventDefault();
-    modal.showModal();
+    modal.classList.add('modal__dialog--on');
+    overlay.classList.add('modal__overlay--on');
     fieldName.focus();
-  };
+  });
 });
 
-window.onclick = function(event) {
+btnClose.addEventListener('click', function(event) {
   event.preventDefault();
-  if (event.keyCode === 27) {
-    modal.close();
+  if (modal.classList.contains('modal__dialog--on') &&
+  overlay.classList.contains('modal__overlay--on')) {
+    modal.classList.remove('modal__dialog--on');
+    overlay.classList.remove('modal__overlay--on');
   }
-};
+});
 
-btnClose.onclick = function(event) {
+overlay.addEventListener('click', function(event) {
   event.preventDefault();
-  modal.close();
-};
+  if (modal.classList.contains('modal__dialog--on') &&
+  overlay.classList.contains('modal__overlay--on')) {
+    modal.classList.remove('modal__dialog--on');
+    overlay.classList.remove('modal__overlay--on');
+  }
+});
 
+window.addEventListener('keydown', function(event) {
+  if (event.keyCode === 27) {
+    if (modal.classList.contains('modal__dialog--on') && overlay.classList.contains('modal__overlay--on')) {
+      modal.classList.remove('modal__dialog--on')
+      overlay.classList.remove('modal__overlay--on');
+    }
+  }
+});
 
-
-
+window.addEventListener('submit', function(event) {
+  if (modal.classList.contains('modal__dialog--on') && overlay.classList.contains('modal__overlay--on')) {
+      modal.classList.remove('modal__dialog--on')
+      overlay.classList.remove('modal__overlay--on');
+  }
+});

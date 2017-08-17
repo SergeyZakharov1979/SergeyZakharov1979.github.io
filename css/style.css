@@ -986,11 +986,26 @@ img {
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.modal {
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.modal__overlay--on {
+  display: block;
+}
+.modal__dialog {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none;
   width: 100%;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1000,6 +1015,9 @@ img {
   border: none;
   background-color: #ffffff;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.7), inset 0 5px 0 red;
+}
+.modal__dialog--on {
+  display: block;
 }
 .modal__title {
   display: block;
@@ -1036,33 +1054,6 @@ img {
 .modal__submit:active {
   opacity: 0.5;
 }
-dialog::-webkit-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-dialog::backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-dialog + .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
 .field-name {
   display: block;
   margin-bottom: 20px;
@@ -1072,6 +1063,7 @@ dialog + .backdrop {
 .field-name__input {
   width: 100%;
   height: 25px;
+  border: 1px solid #cccccc;
 }
 .field-phone {
   display: block;
@@ -1082,6 +1074,7 @@ dialog + .backdrop {
 .field-phone__input {
   width: 100%;
   height: 25px;
+  border: 1px solid #cccccc;
 }
 .field-mail {
   display: block;
@@ -1101,4 +1094,5 @@ dialog + .backdrop {
   width: 100%;
   height: 60px;
   margin-bottom: 20px;
+  border: 1px solid #cccccc;
 }
