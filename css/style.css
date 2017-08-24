@@ -1445,6 +1445,8 @@ img {
     display: -o-flex;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     width: 668px;
     margin-left: auto;
     margin-right: auto;
@@ -1534,6 +1536,9 @@ img {
       justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 10px;
   font-weight: normal;
   font-size: 12px;
@@ -1579,6 +1584,7 @@ img {
   .contacts {
     -ms-flex-item-align: end;
         align-self: flex-end;
+    width: 258px;
     padding-top: 0;
     font-size: 14px;
     line-height: 16px;
@@ -1613,6 +1619,7 @@ img {
 }
 @media (min-width: 1200px) {
   .contacts {
+    width: 350px;
     padding-top: 0;
     font-size: 24px;
     line-height: 30px;

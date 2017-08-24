@@ -59,14 +59,14 @@ var btnClose = modal.querySelector('.btn__close');
 var overlay = document.querySelector('.modal__overlay');
 var fieldName = modal.querySelector('.field-name__input');
 
-btnOrder.forEach(function(item, i) {
-  item.addEventListener('click', function(event) {
+for (var i = 0, len = btnOrder.length;  i<len; i++) {
+  btnOrder[i].addEventListener('click', function(event) {
     event.preventDefault();
     modal.classList.add('modal__dialog--on');
     overlay.classList.add('modal__overlay--on');
     fieldName.focus();
   });
-});
+};
 
 btnClose.addEventListener('click', function(event) {
   event.preventDefault();
