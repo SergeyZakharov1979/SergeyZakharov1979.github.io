@@ -1,4 +1,5 @@
 .how-find-us-block {
+  margin-bottom: 30px;
   padding-top: 20px;
   padding-bottom: 10px;
   background-image: url(../img/find-us-mobile-bg@1x.jpg);
@@ -6,8 +7,89 @@
   background-repeat: no-repeat;
 }
 
+.how-find-us-block__title {
+  display: none;
+}
+
 @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .how-find-us-block {
     background-image: url(../img/find-us-mobile-bg@2x.jpg);
   }
+}
+
+@media @tablet-widths {
+  .how-find-us-block {
+    margin-bottom: 40px;
+    padding-top: 7px;
+    padding-bottom: 43px;
+
+    background-image: url(../img/find-us-tablet-bg@1x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .how-find-us-block {
+      background-image: url(../img/find-us-tablet-bg@2x.jpg);
+    }
+  }
+
+  .how-find-us-block__title {
+    display: block;
+    margin-bottom: 80px;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #000000;
+  }
+
+  .how-find-us-block__wrap {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+    width: 668px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .how-find-us-block {
+    margin-bottom: 60px;
+    padding-top: 58px;
+    padding-bottom: 42px;
+
+    background-image: url(../img/find-us-desktop-bg@1x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .how-find-us-block {
+      background-image: url(../img/find-us-desktop-bg@2x.jpg);
+    }
+  }
+
+  .how-find-us-block__wrap {
+    width: 1100px;
+  }
+
+  .how-find-us-block__title {
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 30px;
+    text-align: center;
+    color: #000000;
+  }
+
 }

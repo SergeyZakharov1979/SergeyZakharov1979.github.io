@@ -4,13 +4,13 @@
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 
   padding-top: 10px;
 
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
 
 }
 
@@ -18,53 +18,14 @@
 .contacts__phone,
 .contacts__mail,
 .contacts__whatsapp {
-  flex-basis: 130px;
+  flex-basis: 150px;
 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.contacts__adress {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-}
-
-.contacts__adress--icon {
-  margin-right: 10px;
-
-  align-self: center;
-}
-
-.contacts__phone {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-}
-
-.contacts__phone--icon {
-  margin-right: 10px;
-
-  align-self: center;
-}
-
-.contacts__mail {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-}
-
-.contacts__mail--icon {
-  margin-right: 10px;
-
-  align-self: center;
-}
-
+.contacts__adress,
+.contacts__phone,
+.contacts__mail,
 .contacts__whatsapp {
   display: -webkit-flex;
   display: -moz-flex;
@@ -73,8 +34,101 @@
   display: flex;
 }
 
+.contacts__adress--icon,
+.contacts__phone--icon,
+.contacts__mail--icon,
 .contacts__whatsapp--icon {
   margin-right: 10px;
 
   align-self: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.contacts__mail--content {
+  width: 100px;
+}
+
+@media @tablet-widths {
+
+  .contacts {
+    align-self: flex-end;
+    padding-top: 0;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .contacts__adress,
+  .contacts__phone,
+  .contacts__mail,
+  .contacts__whatsapp {
+    flex-basis: 80%;
+
+    margin-bottom: 26px;
+  }
+
+  .contacts__whatsapp {
+    margin-bottom: 0;
+  }
+
+  .contacts__adress--icon,
+  .contacts__phone--icon,
+  .contacts__mail--icon,
+  .contacts__whatsapp--icon {
+    margin-right: 9px;
+
+    align-self: center;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+}
+
+@media @desktop-widths {
+
+  .contacts {
+    padding-top: 0;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .contacts__adress,
+  .contacts__phone,
+  .contacts__mail,
+  .contacts__whatsapp {
+    flex-basis: 100%;
+
+    margin-bottom: 60px;
+  }
+
+  .contacts__adress {
+    flex-basis: 90%;
+  }
+
+  .contacts__whatsapp {
+    margin-bottom: 50px;
+  }
+
+  .contacts__adress--icon,
+  .contacts__phone--icon,
+  .contacts__mail--icon,
+  .contacts__whatsapp--icon {
+    margin-right: 20px;
+
+    align-self: center;
+
+    svg {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
 }

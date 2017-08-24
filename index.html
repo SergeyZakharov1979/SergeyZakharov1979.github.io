@@ -5,6 +5,7 @@
 		<title>porters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
+    <script src="js/picturefill.js" async></script>
 	</head>
 	<body>
     <svg style="display: none;">
@@ -133,40 +134,43 @@
     </svg>
     <a name="main-header"></a>
 		<header class="main-header">
-      <div class="container">
-  		  <h1 class="main-header__title">Грузчики Новосибирск</h1>
-  		<!-- Заголовок будет скрыт средствами CSS -->
+      <div class="main-header__wrapper">
+  		  <h1 class="main-header__title">
+          Грузчики Новосибирск
+        </h1>
+    		<!-- Заголовок будет скрыт средствами CSS -->
   			<a class="logo">
-  				<img src="img/logo-porters.png" width="139" height="13" alt="logo-header">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/logo-porters-desktop.png">
+            <img src="img/logo-porters.png" alt="logo-header">
+          </picture>
   			</a>
   			<div class="main-header__toggle-menu">
             <span class="main-header__toggle-menu--close"></span>
         </div>
-      </div>
   			<!-- с помощью JS будет добавляться класс  main-header__toggle-menu--open-->
-			<nav class="main-navigation  main-navigation--header-nojs">
-				<ul class="main-navigation__list">
-					<li class="main-navigation__item">
-            <a>Услуги</a>
-            <ul class="main-navigation__services-list">
-              <li><a class="main-navigation__services-item" href="#promo-block-office-movies">Офисный переезд</a></li>
-              <li><a class="main-navigation__services-item" href="#promo-block-appartment-movies">Квартирный переезд</a></li>
-              <li><a class="main-navigation__services-item" href="#promo-block-warehousing">Работа на складе</a></li>
-            </ul>
-          </li>
-					<li class="main-navigation__item">
-            <a href="#about-us-block">О нас</a>
-          </li>
-					<li class="main-navigation__item">
-            <a href="#how-find-us-block">Как нас найти</a>
-          </li>
-				</ul>
-			</nav>
-      <div class="container">
+  			<nav class="main-navigation  main-navigation--header-nojs">
+  				<ul class="main-navigation__list">
+  					<li class="main-navigation__item">
+              <a>Услуги</a>
+              <ul class="main-navigation__services-list">
+                <li><a class="main-navigation__services-item" href="#promo-block-office-movies">Офисный переезд</a></li>
+                <li><a class="main-navigation__services-item" href="#promo-block-appartment-movies">Квартирный переезд</a></li>
+                <li><a class="main-navigation__services-item" href="#promo-block-warehousing">Работа на складе</a></li>
+              </ul>
+            </li>
+  					<li class="main-navigation__item">
+              <a href="#about-us-block">О нас</a>
+            </li>
+  					<li class="main-navigation__item">
+              <a href="#how-find-us-block">Как нас найти</a>
+            </li>
+  				</ul>
+  			</nav>
   			<div class="office-phone">
   				<a class="office-phone__link" href="tel:+79139851198">
   					<span class="office-phone__icon">
-              <svg class="phone-icon" width="30" height="30">
+              <svg class="phone-icon">
                 <use id="phone-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-icon"></use>
               </svg>
             </span>
@@ -213,40 +217,61 @@
     					Вконтакте
     				</a>
     			</div>
-    			<div class="promo__list">
-    				<h2 class="promo__title">Услуги грузчиков<br> <span>в Новосибирске</span></h2>
-    				<p class="promo__cost">от 200 рублей/час</p>
-    			</div>
+          <div class="promo__wrap">
+      			<div class="promo__list">
+      				<h2 class="promo__title">Услуги грузчиков<br> <span>в Новосибирске</span></h2>
+      				<p class="promo__cost">от 200 рублей/час</p>
+      			</div>
+            <p class="promo__descr  promo-block-services__descr-width">
+              Наши грузчики имеют большой практический опыт погрузочно-разгрузочных работ, а также переездов любого масштаба и сложности. А их навыки и знания гарантируют полную сохранность вашего имущества...
+            </p>
+          </div>
     			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
       <a name="promo-block-office-movies"></a>
   		<article class="promo-block-office-movies">
         <div class="container">
-    			<div class="promo__list">
-    				<h2 class="promo__title">Офисный переезд<br> <span>в Новосибирcке</span></h2>
-    				<p class="promo__cost">от 250 рублей/час</p>
-    			</div>
+          <div class="promo__wrap">
+      			<div class="promo__list promo__list--correct-width">
+      				<h2 class="promo__title  promo__title--black-color">Офисный переезд<br> <span>в Новосибирcке</span></h2>
+      				<p class="promo__cost  promo__cost--blue-color">от 250 рублей/час</p>
+      			</div>
+            <p class="promo__descr promo__descr--black-color">
+              Нам важно быть уверенными, что вам будет комфортно с нами работать, потому что безупречная надежность
+              и приятная атмосфера — это то, что отличает наши услуги.
+            </p>
+          </div>
     			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
       <a name="promo-block-appartment-movies"></a>
   		<article class="promo-block-appartment-movies">
         <div class="container">
-    			<div class="promo__list">
-    				<h2 class="promo__title">Квартирный переезд<br> <span>в Новосибирске</span></h2>
-    				<p class="promo__cost">от 200 рублей/час</p>
-    			</div>
+          <div class="promo__wrap">
+      			<div class="promo__list  promo-block-appartment-movies--correct-list">
+      				<h2 class="promo__title  promo-block-appartment-movies--title-correct">Квартирный переезд<br> <span>в Новосибирске</span></h2>
+      				<p class="promo__cost">от 200 рублей/час</p>
+      			</div>
+            <p class="promo__descr">
+              Нам действительно есть чем гордиться – ведь именно наши грузчики приглашаются для осуществления самых сложных и масштабных переездов. А это говорит о доверии со стороны клиентов, что лучше всяких слов подтверждает качество оказываемых нами услуг.
+            </p>
+          </div>
     			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
       <a name="promo-block-warehousing"></a>
   		<article class="promo-block-warehousing">
         <div class="container">
-    			<div class="promo__list">
-    				<h2 class="promo__title">Работа на складе<br> <span>в Новосибирске</span></h2>
-    				<p class="promo__cost">от 200 рублей/час</p>
-    			</div>
+          <div class="promo__wrap">
+      			<div class="promo__list  promo__list--correct-width  promo-block-warehousing--list-correct">
+      				<h2 class="promo__title  promo__title--black-color  promo-block-warehousing--title-correct">Работа на складе<br> <span>в Новосибирске</span></h2>
+      				<p class="promo__cost  promo__cost--blue-color">от 200 рублей/час</p>
+      			</div>
+            <p class="promo__descr  promo__descr--black-color">
+              Мы предлагаем гибкую систему оплаты услуг. Вы можете выбрать то, что подходит именно вам — наличный или безналичный расчёт. Вам обязательно понравится соотношение цены и качества, а для постоянных клиентов мы всегда рады сделать скидки!
+            </p>
+          </div>
     			<button class="btn  btn__order-js  btn__order--mobile">Заказать</button>
         </div>
   		</article>
@@ -285,77 +310,88 @@
   		</section>
       <a name="how-find-us-block"></a>
   		<section class="how-find-us-block">
-  			<div class="map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2281.0201449364827!2d82.8934783161892!3d55.13042498039148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dffae7ee4275b9%3A0x7a1e94342dc20e1b!2sul.+Kubovaya%2C+60%2C+Novosibirsk%2C+Novosibirskaya+oblast&#39;%2C+630040!5e0!3m2!1sen!2sru!4v1502188197680" width="320" height="229" frameborder="0" style="border:0" allowfullscreen></iframe>
-  			</div>
-        <div class="container">
-    			<div class="contacts">
-    				<span class="contacts__adress">
-    					<span class="contacts__adress--icon">
-                <svg width="20" height="20">
-                  <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#adress-icon"></use>
-                </svg>
-              </span>
-    					<span class="contacts__adress--content">
-                Adress:<br> г. Новосибирск, ул. Кубовая, 60
-              </span>
-    				</span>
-    				<span class="contacts__phone">
-    					<span class="contacts__phone--icon">
-                <svg width="20" height="20">
-                  <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-icon"></use>
-                </svg>
-              </span>
-    					<span class="contacts__phone--content">Tel.:<br> +7(383)213-11-98</span>
-    				</span>
-    				<span class="contacts__mail">
-    					<span class="contacts__mail--icon">
-                <svg width="20" height="20">
-                  <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#email-icon"></use>
-                </svg>
-              </span>
-    					<span class="contacts__mail--content">E-mail:<br> gruzchiki154<br>@mail.ru</span>
-    				</span>
-    				<span class="contacts__whatsapp">
-    					<span class="contacts__whatsapp--icon">
-                <svg width="20" height="20">
-                  <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#whatsapp-icon"></use>
-                </svg>
-              </span>
-    					<span class="contacts__whatsapp--content">WhatsApp:<br> +7(913) 002-04-97</span>
-    				</span>
+        <h2 class="how-find-us-block__title">
+          Как нас найти
+        </h2>
+        <div class="how-find-us-block__wrap">
+    			<div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2281.0201449364827!2d82.8934783161892!3d55.13042498039148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dffae7ee4275b9%3A0x7a1e94342dc20e1b!2sul.+Kubovaya%2C+60%2C+Novosibirsk%2C+Novosibirskaya+oblast&#39;%2C+630040!5e0!3m2!1sen!2sru!4v1502188197680"  frameborder="0" style="border:0" allowfullscreen></iframe>
     			</div>
+          <div class="container">
+      			<div class="contacts">
+      				<span class="contacts__adress">
+      					<span class="contacts__adress--icon">
+                  <svg>
+                    <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#adress-icon"></use>
+                  </svg>
+                </span>
+      					<span class="contacts__adress--content">
+                  Adress:<br> г. Новосибирск, ул. Кубовая, 60
+                </span>
+      				</span>
+      				<span class="contacts__phone">
+      					<span class="contacts__phone--icon">
+                  <svg>
+                    <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#phone-icon"></use>
+                  </svg>
+                </span>
+      					<span class="contacts__phone--content">Tel.:<br> +7(383)213-11-98</span>
+      				</span>
+      				<span class="contacts__mail">
+      					<span class="contacts__mail--icon">
+                  <svg>
+                    <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#email-icon"></use>
+                  </svg>
+                </span>
+      					<span class="contacts__mail--content">E-mail:<br>gruzchiki154@mail.ru</span>
+      				</span>
+      				<span class="contacts__whatsapp">
+      					<span class="contacts__whatsapp--icon">
+                  <svg>
+                    <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#whatsapp-icon"></use>
+                  </svg>
+                </span>
+      					<span class="contacts__whatsapp--content">WhatsApp:<br> +7(913) 002-04-97</span>
+      				</span>
+      			</div>
+          </div>
+        </div>
+        <div class="container">
+          <button class="btn  btn--callback">Заказать обратный звонок</button>
         </div>
   		</section>
     </main>
 		<footer class="main-footer">
-      <div class="container">
-  			<a class="logo logo--footer" href="index.html">
-  				<img src="img/logo footer.png" width="139" height="13" alt="logo-footer">
-  			</a>
-  			<div class="main-footer__toggle-menu">
-            <span class="main-footer__toggle-menu--close"></span>
+      <div class="main-footer__wrapper">
+        <div class="main-footer__inner">
+    			<a class="logo  logo--footer" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-footer-desktop.png">
+              <img src="img/logo footer.png" alt="logo-header">
+            </picture>
+          </a>
+    			<div class="main-footer__toggle-menu">
+              <span class="main-footer__toggle-menu--close"></span>
+          </div>
+    			<!-- с помощью JS будет добавляться класс  main-footer__toggle-menu--open-->
         </div>
-  			<!-- с помощью JS будет добавляться класс  main-footer__toggle-menu--open-->
-      </div>
-			<nav class="main-navigation  main-navigation--footer  main-navigation--footer-nojs">
-				<ul class="main-navigation__list">
-					<li class="main-navigation__item--footer"><a>Услуги</a>
-            <ul class="main-navigation__services-list--footer">
-              <li><a class="main-navigation__services-item" href="#promo-block-office-movies">Офисный переезд</a></li>
-              <li><a class="main-navigation__services-item" href="#promo-block-appartment-movies">Квартирный переезд</a></li>
-              <li><a class="main-navigation__services-item" href="#promo-block-warehousing">Работа на складе</a></li>
-            </ul>
-          </li>
-					<li class="main-navigation__item--footer"><a href="#about-us-block">О нас</a></li>
-					<li class="main-navigation__item--footer"><a>Как нас найти</a></li>
-				</ul>
-			</nav>
-      <div class="container">
+  			<nav class="main-navigation  main-navigation--footer  main-navigation--footer-nojs">
+  				<ul class="main-navigation__list">
+  					<li class="main-navigation__item--footer"><a>Услуги</a>
+              <ul class="main-navigation__services-list--footer">
+                <li><a class="main-navigation__services-item" href="#promo-block-office-movies">Офисный переезд</a></li>
+                <li><a class="main-navigation__services-item" href="#promo-block-appartment-movies">Квартирный переезд</a></li>
+                <li><a class="main-navigation__services-item" href="#promo-block-warehousing">Работа на складе</a></li>
+              </ul>
+            </li>
+  					<li class="main-navigation__item--footer"><a href="#about-us-block">О нас</a></li>
+  					<li class="main-navigation__item--footer"><a>Как нас найти</a></li>
+  				</ul>
+  			</nav>
   			<div class="social-icons social-icons--footer">
   				<a href="#" class="social-icon">
   					<span class="fb-icon  fb-icon--footer">
-              <svg width="30" height="30">
+              <svg>
                 <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#fb-icon"></use>
               </svg>
             </span>
@@ -363,7 +399,7 @@
   				</a>
   				<a href="#" class="social-icon">
   					<span class="whats-icon  whats-icon--footer">
-              <svg width="30" height="30">
+              <svg>
                 <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#whatsapp-icon"></use>
               </svg>
             </span>
@@ -371,7 +407,7 @@
   				</a>
   				<a href="#" class="social-icon">
   					<span class="inst-icon  inst-icon--footer">
-              <svg width="30" height="30">
+              <svg>
                 <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#insta-icon"></use>
               </svg>
             </span>
@@ -379,7 +415,7 @@
   				</a>
   				<a href="#" class="social-icon">
   					<span class="vk-icon  vk-icon--footer">
-              <svg width="30" height="30">
+              <svg>
                 <use xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#vk-icon"></use>
               </svg>
             </span>

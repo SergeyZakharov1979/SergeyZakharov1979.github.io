@@ -30,8 +30,47 @@
   }
 }
 
+.phone-icon {
+  width: 30px;
+  height: 30px;
+}
+
 .office-phone__number {
   display: inline-block;
   padding-top: 2px;
   vertical-align: top;
+}
+
+@media @tablet-widths {
+
+  .office-phone {
+    margin-left: 0;
+    margin-right: 0;
+
+    text-align: right;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .office-phone {
+    a {
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+
+  .office-phone__number {
+    display: inline-block;
+    margin-left: 5px;
+    padding-top: 12px;
+    vertical-align: top;
+  }
+
+  .phone-icon {
+    width: 50px;
+    height: 50px;
+  }
+
 }

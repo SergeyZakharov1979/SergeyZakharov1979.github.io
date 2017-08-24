@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 100;
 
   display: none;
   width: 100%;
@@ -20,10 +20,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 10;
+  z-index: 1000;
 
   display: none;
-  width: 100%;
+  width: 320px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 40px;
@@ -82,4 +82,29 @@
   &:active {
     opacity: 0.5;
   }
+}
+
+@media @tablet-widths {
+
+  .modal__dialog {
+    width: 500px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .modal__title {
+    font-size: 18px;
+  }
+
+  .modal__submit {
+    font-size: 14px;
+  }
+
+  .modal__footnote {
+    font-weight: normal;
+    font-size: 12px;
+  }
+
 }
