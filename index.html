@@ -37,7 +37,7 @@
     	</div>
     	</div>
     	<div>
-    		<a href="#portfolio" class="main-down">
+    		<a href="#portfolio" class="main-down slowly">
     			<i class="icon-down"></i>
     		</a>
     	</div>
@@ -123,12 +123,12 @@
     <script>
       $(document).ready(function() {
         // навигация - плавный скроллинг к якорю
-        $(".slowly").on('click', function (event) {
+        $(".slowly").on("click", function (event) {
             // отменяем стандартную обработку нажатия по ссылке
             event.preventDefault();
 
             // забираем идентификатор блока с атрибута href
-            var id = $(this).attr("href"),
+            var id = $(this).attr('href'),
 
             // узнаем высоту от начала страницы до блока на который ссылается якорь
             top = $(id).offset().top;
