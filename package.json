@@ -1,0 +1,36 @@
+{
+  "name": "Loader",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Личный проект «Грузчики.nsk»",
+  "devDependencies": {
+    "@htmlacademy/editorconfig-cli": "1.x",
+    "autoprefixer": "6.7.x",
+    "grunt": "1.0.1",
+    "grunt-browser-sync": "2.2.0",
+    "grunt-contrib-less": "^1.4.1",
+    "grunt-contrib-watch": "1.0.0",
+    "grunt-postcss": "0.8.0",
+    "pixel-glass": "^1.0.13",
+    "stylelint-config-htmlacademy": "^0.1.0"
+  },
+  "scripts": {
+    "test": "editorconfig-cli",
+    "build": "grunt less && grunt postcss",
+    "start": "npm run build && grunt serve"
+  },
+  "editorconfig-cli": [
+    "*.html",
+    "*.json",
+    "*.js",
+    "js/**/*.js",
+    "img/**/*.svg",
+    "less/**/*.less"
+  ],
+  "engines": {
+    "node": "6.10"
+  },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  }
+}
