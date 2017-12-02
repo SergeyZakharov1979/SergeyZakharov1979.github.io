@@ -259,6 +259,7 @@ img {
 }
 .main-header {
   height: 100vh;
+  max-height: 570px;
   padding-top: 15px;
   background-color: #003333;
   background-image: url(../img/header-bg-img-mobile@1x.jpg);
@@ -844,6 +845,11 @@ div.main-nav__toggle--open {
   margin: 0 auto;
   overflow: hidden;
 }
+.slider__wrapper {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+}
 .slider__inner {
   width: 10000px;
   height: 181px;
@@ -868,8 +874,8 @@ div.main-nav__toggle--open {
 }
 .slider__button-prev {
   position: absolute;
-  top: 134px;
-  left: 36px;
+  top: 73px;
+  left: 17px;
   width: 22px;
   height: 40px;
   background-image: url(../img/back-arrow-white.svg);
@@ -879,8 +885,8 @@ div.main-nav__toggle--open {
 }
 .slider__button-next {
   position: absolute;
-  top: 134px;
-  left: 261px;
+  top: 73px;
+  left: 242px;
   width: 22px;
   height: 40px;
   background-image: url(../img/next-arrow-white.svg);
