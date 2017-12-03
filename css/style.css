@@ -405,6 +405,11 @@ div.main-nav__toggle--open {
 .main-nav__list--closed {
   display: none;
 }
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .main-nav__list {
+    width: 425px;
+  }
+}
 .btn {
   display: block;
 }
