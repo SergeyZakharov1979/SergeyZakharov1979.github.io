@@ -264,7 +264,7 @@ img {
   background-color: #003333;
   background-image: url(../img/header-bg-img-mobile@1x.jpg);
   background-repeat: no-repeat;
-  background-position: center 0;
+  background-position: 75% 0;
 }
 .main-header__wrapper-title {
   position: relative;
@@ -313,6 +313,11 @@ img {
   height: 73px;
   background-color: #000000;
   border-radius: 50%;
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .main-header {
+    height: 570px;
+  }
 }
 .main-nav {
   position: relative;
@@ -423,8 +428,8 @@ div.main-nav__toggle--open {
   color: #ffffff;
 }
 .btn--down {
-  position: absolute;
-  bottom: 50px;
+  position: relative;
+  top: 125px;
   left: 50%;
   transform: translate(-50%, 0);
   width: 20px;
@@ -437,8 +442,7 @@ div.main-nav__toggle--open {
 }
 .btn--down:hover {
   line-height: 22px;
-  border: 1px solid #000000;
-  background-color: #669999;
+  border-color: #669999;
 }
 .btn--reviews {
   padding-top: 5px;
