@@ -428,12 +428,10 @@ div.main-nav__toggle--open {
   color: #ffffff;
 }
 .btn--down {
-  position: relative;
-  top: 125px;
-  left: 50%;
-  transform: translate(-50%, 0);
   width: 20px;
   height: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
   line-height: 20px;
   text-align: center;
   border: 2px solid #ffffff;
@@ -521,13 +519,16 @@ div.main-nav__toggle--open {
   color: #ffffff;
 }
 .contacts {
+  width: 290px;
   padding-top: 14px;
   padding-bottom: 45px;
   padding-left: 52px;
   padding-right: 52px;
+  margin: 0 auto;
   background-image: url(../img/contact-us-img-mobile@1x.jpg);
   background-size: 290px 344px;
   background-repeat: no-repeat;
+  background-position: center 0;
 }
 .contacts__title {
   margin-bottom: 3px;
@@ -546,10 +547,12 @@ div.main-nav__toggle--open {
   color: #ffffff;
 }
 .form-order {
+  width: 290px;
   padding-top: 10px;
   padding-left: 55px;
   padding-right: 55px;
   padding-bottom: 45px;
+  margin: 0 auto;
   background-color: #ffffff;
 }
 .form-order__title {
@@ -830,6 +833,11 @@ div.main-nav__toggle--open {
   width: 290px;
   margin: 0 auto;
 }
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .container {
+    width: 400px;
+  }
+}
 .logo {
   display: inline-block;
   margin-right: 30px;
@@ -841,6 +849,15 @@ div.main-nav__toggle--open {
 .logo--footer {
   margin-right: 0;
   margin: 0 auto;
+}
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  .logo {
+    margin-right: 85px;
+  }
+  .logo--footer {
+    margin-right: 0;
+    margin: 0 auto;
+  }
 }
 .slider {
   display: block;
