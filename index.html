@@ -6,74 +6,108 @@
   <title>Loader-services</title>
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/picturefill.js" async></script>
 </head>
 <body>
-  <!-- SVG sprites -->
-  <svg style="display: none;">
-
-  </svg>
-  <!-- END SVG sprites -->
   <header class="main-header">
     <div class="container">
       <div class="main-nav">
-        <div class="main-nav__toggle  main-nav__toggle--close"></div>
-        <ul class="main-nav__list main-nav__list--nojs">
-          <li><a href="#">Главная</a></li>
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Услуги</a></li>
-          <li><a href="#">Отзывы</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <div class="logo">
-          <img src="img/logo.svg" width="74" height="7" alt="logo">
-        </div>
-        <a class="block-tel" href="tel:+79139851198">
-          8 383 213-11-98
-        </a>
-      </div>
-      <div class="main-heder__wrapper-title">
-        <h1 class="main-header__title">грузчики</h1>
-        <div class="main-header__subtitle">
-            в Новосибирскe
-        </div>
-        <div class="main-header__circle"></div>
-        <div class="main-header__cost">
-          от <span> 130 </span>руб.
+        <div class="main-nav__inner">
+          <div class="main-nav__toggle  main-nav__toggle--close"></div>
+          <ul class="main-nav__list main-nav__list--nojs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#our-workflow">О нас</a></li>
+            <li><a href="#our-services">Услуги</a></li>
+            <li><a href="https://vk.com/topic-71669111_33842798">Отзывы</a></li>
+            <li><a href="#order-block">Контакты</a></li>
+          </ul>
+          <a href="index.html" class="logo">
+            <picture>
+              <source media="(min-width: 1170px)" srcset="img/logo.svg">
+              <source media="(min-width: 768px)" srcset="img/logo.svg">
+              <img src="img/logo.svg" width="74" height="7" alt="logo">
+            </picture>
+          </a>
+          <a class="block-tel" href="tel:+79139851198">
+            8 383 213-11-98
+          </a>
         </div>
       </div>
-      <div class="btn btn--order-white">Заказать</div>
+      <div class="main-header__inner">
+        <div class="main-heder__wrapper-title">
+          <h1 class="main-header__title">грузчики</h1>
+          <div class="main-header__subtitle">
+              в Новосибирскe
+          </div>
+          <div class="main-header__cost">
+            от <span> 130 </span>руб.
+          <div class="main-header__circle"></div>
+          </div>
+        </div>
+        <p class="main-header__lid">
+          Помощь при переездах, работа на складе,<br>
+          подъём стройматериалов, вывоз строительного мусора
+          и другие виды погрузо-разгрузочных работ
+        </p>
+        <button class="btn btn--order-white" id="btnOrder">
+          Заказать
+        </button>
+      </div>
       <a class="btn btn--down" href="#preferances">
-        <img src="img/down-arrow-white.svg" width="10"alt="btn-down">
+        <picture>
+          <source media="(min-width: 1170px)" srcset="img/down-arrow-white.svg">
+          <img src="img/down-arrow-white.svg" width="10" height="10" alt="btn-down">
+        </picture>
       </a>
     </div>
   </header>
   <main>
-    <section class="preferances" id ="preferances">
+    <section class="preferances" id="preferances">
       <div class="container">
         <h2 class="preferances__title">
           - Почему выбирают нас -
         </h2>
-        <div class="preferances__item">
-          <div class="preferances__item-icon  preferances__item-icon--stopwatch"></div>
-          <h3 class="preferances__subtitle">
-            Cкорость
-          </h3>
-          <p class="preferances__content">Прибытие грузчиков на заявку в течении 30 минут по линии метро. За 1-1,5 часа прибытие на объект в черте города с момента заказа.</p>
+        <div class="preferances__wrapper">
+          <div class="preferances__items">
+            <div class="preferances__item">
+              <div class="preferances__item-icon  preferances__item-icon--stopwatch">
+              </div>
+              <div class="preferances__item-inner">
+                <h3 class="preferances__subtitle">
+                Cкорость
+                </h3>
+                <p class="preferances__content">Прибытие грузчиков на заявку в течении 30 минут по линии метро. За 1-1,5 часа прибытие на объект в черте города с момента заказа.</p>
+              </div>
+            </div>
+            <div class="preferances__item">
+              <div class="preferances__item-icon  preferances__item-icon--medal">
+              </div>
+              <div class="preferances__item-inner">
+                <h3 class="preferances__subtitle">
+                Качество
+                </h3>
+                <p class="preferances__content">Только русские, молодые крепкие ребята. Без лишних простоев и перекуров сделают вашу работу в максимально короткие сроки. Наше качество  выше стоимости.</p>
+              </div>
+            </div>
+            <div class="preferances__item">
+              <div class="preferances__item-icon  preferances__item-icon--diploma">
+              </div>
+              <div class="preferances__item-inner">
+                <h3 class="preferances__subtitle">
+                Надёжность
+                </h3>
+                <p class="preferances__content">Заключаем договоры с организациями и частными лицами. Заказав у нас грузчиков, вам не придётся беспокоиться ни о чём. Всё будет выполнено в установленные сроки.</p>
+              </div>
+            </div>
+          </div>
+          <div class="preferances__img">
+            <picture>
+              <source media="(min-width: 1170px)" srcset="img/preferance-img-desktop@1x.jpg 1x, img/preferance-img-desktop@2x.jpg 2x">
+              <img src="img/preferance-img-tablet@1x.jpg" srcset="img/preferance-img-tablet@2x.jpg" alt="preferances-img">
+            </picture>
+          </div>
         </div>
-        <div class="preferances__item">
-          <div class="preferances__item-icon  preferances__item-icon--medal"></div>
-          <h3 class="preferances__subtitle">
-            Качество
-          </h3>
-          <p class="preferances__content">Только русские, молодые крепкие ребята. Без лишних простоев и перекуров сделают вашу работу в максимально короткие сроки. Наше качество  выше стоимости.</p>
-        </div>
-        <div class="preferances__item">
-          <div class="preferances__item-icon  preferances__item-icon--diploma"></div>
-          <h3 class="preferances__subtitle">
-            Надёжность
-          </h3>
-          <p class="preferances__content">Заключаем договоры с организациями и частными лицами. Заказав у нас грузчиков Вам не придётся беспокоиться ни о чём. Всё будет выполнено в установленные сроки.</p>
-        </div>
+      </div>
     </section>
     <section class="our-clients">
       <h2 class="our-clients__title">
@@ -87,152 +121,265 @@
           </div>
           <div class="slider__inner">
             <figure class="slider__item">
-              <img src="img/trust-us-img-1-mobile@1x.png" width="181" height="116" alt="trust-img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/trust-us-img-1-desktop@1x.png 1x, img/trust-us-img-1-desktop@2x.png 2x">
+                <img src="img/trust-us-img-1-mobile@1x.png" srcset="img/trust-us-img-1-mobile@2x.png" alt="trust-img" class="slider__img-mobile">
+              </picture>
               <figcaption class="slider__text">
                 Такелажные работы и услуги грузчиков для компании уже 4 года
               </figcaption>
             </figure>
             <figure class="slider__item">
-              <img src="img/trust-us-img-2-mobile@1x.png" width="181" height="116" alt="trust-img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/trust-us-img-2-desktop@1x.png 1x, img/trust-us-img-2-desktop@2x.png 2x">
+                <img src="img/trust-us-img-2-mobile@1x.png" srcset="img/trust-us-img-2-mobile@2x.png" alt="trust-img" class="slider__img-mobile">
+              </picture>
               <figcaption class="slider__text">
                 Плодотворное  и взаимовыгодное сотрудничество уже более 3 лет
               </figcaption>
             </figure>
             <figure class="slider__item">
-              <img src="img/trust-us-img-3-mobile@1x.png" alt="trust-img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/trust-us-img-3-desktop@1x.png 1x, img/trust-us-img-3-desktop@2x.png 2x">
+                <img src="img/trust-us-img-3-mobile@1x.png" srcset="img/trust-us-img-3-mobile@2x.png" alt="trust-img" class="slider__img-mobile">
+              </picture>
               <figcaption class="slider__text">
                 Помогаем ежегодно в открытии летних кафе и закрытии сезона
               </figcaption>
             </figure>
             <figure class="slider__item">
-              <img src="img/trust-us-img-4-mobile@1x.png" alt="trust-img">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/trust-us-img-4-desktop@1x.png 1x, img/trust-us-img-4-desktop@2x.png 2x">
+                <img src="img/trust-us-img-4-mobile@1x.png" srcset="img/trust-us-img-4-mobile@2x.png" alt="trust-img" class="slider__img-mobile">
+              </picture>
               <figcaption class="slider__text">
                 Оказываем помощь в открытии новых офисов компании
+              </figcaption>
+            </figure>
+            <figure class="slider__item">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/trust-us-img-5-desktop@1x.png 1x, img/trust-us-img-5-desktop@2x.png 2x">
+                <img src="img/trust-us-img-5-mobile@1x.png" srcset="img/trust-us-img-5-mobile@2x.png" alt="trust-img" class="slider__img-mobile">
+              </picture>
+              <figcaption class="slider__text">
+                Работаем уже около 2 лет на постоянной основе
+              </figcaption>
+            </figure>
+            <figure class="slider__item">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/trust-us-img-6-desktop@1x.png 1x, img/trust-us-img-6-desktop@2x.png 2x">
+                <img src="img/trust-us-img-6-mobile@1x.png" srcset="img/trust-us-img-6-mobile@2x.png" alt="trust-img" class="slider__img-mobile">
+              </picture>
+              <figcaption class="slider__text">
+                Работаем с октября 2017, но зарекомендовать себя уже успели
+              </figcaption>
+            </figure>
+            <figure class="slider__item">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/trust-us-img-7-desktop@1x.png 1x, img/trust-us-img-7-desktop@2x.png 2x">
+                <img src="img/trust-us-img-7-mobile@1x.png" srcset="img/trust-us-img-7-mobile@2x.png" alt="trust-img" class="slider__img-mobile">
+              </picture>
+              <figcaption class="slider__text">
+                Работаем с середины 2017 и нами довольны
               </figcaption>
             </figure>
           </div>
         </div>
       </div>
     </section>
-    <section class="our-workflow">
+    <section class="our-workflow"  id="our-workflow">
       <h2 class="our-workflow__title">
         - Как мы работаем -
       </h2>
-      <div class="our-workflow__item">
-        <div class="our-workflow__icon">1</div>
-        <h3 class="our-workflow__subtitle">Заказ</h3>
-        <div class="our-workflow__content">Вы оставляете заявку на нашем сайте, отправив сообщение по E-mail, либо можете связаться с нами по телефону</div>
-      </div>
-      <div class="our-workflow__item">
-        <div class="our-workflow__icon">2</div>
-        <h3 class="our-workflow__subtitle">Обратная связь</h3>
-        <div class="our-workflow__content  our-workflow__content--intrinsic-style-item2">С вами связывается менеджер, узнаёт все детали, договаривается и отправляет рабочих и транспорт</div>
-      </div>
-      <div class="our-workflow__item">
-        <div class="our-workflow__icon">3</div>
-        <h3 class="our-workflow__subtitle">Работа</h3>
-        <div class="our-workflow__content">Рабочие максимально быстро прибывают на объект и выполняют оговоренную ранее работу</div>
-      </div>
-      <div class="our-workflow__item">
-        <div class="our-workflow__icon  our-workflow__icon--intrinsic-style-item4">4</div>
-        <h3 class="our-workflow__subtitle">Расчёт</h3>
-        <div class="our-workflow__content">После выполнения работы грузчиками  происходит подсчёт отработанного времени, подписывается акт, происходит оплата работы</div>
+      <div class="our-workflow__inner">
+        <div class="our-workflow__item-wrapper">
+          <div class="our-workflow__item">
+            <div class="our-workflow__icon">1</div>
+            <h3 class="our-workflow__subtitle">Заказ</h3>
+            <div class="our-workflow__content">Вы оставляете заявку на нашем сайте, отправив сообщение по E-mail, либо можете связаться с нами по телефону</div>
+          </div>
+          <div class="our-workflow__item">
+            <div class="our-workflow__icon">2</div>
+            <h3 class="our-workflow__subtitle">Обратная связь</h3>
+            <div class="our-workflow__content  our-workflow__content--intrinsic-style-item2">С вами связывается менеджер, узнаёт все детали, договаривается и отправляет рабочих и транспорт по указанному вами адресу</div>
+          </div>
+        </div>
+        <div class="our-workflow__img">
+          <picture>
+            <img src="img/how-we-work-img-desktop@1x.png" srcset="img/how-we-work-img-desktop@2x.png" alt="our-workflow__img">
+          </picture>
+        </div>
+        <div class="our-workflow__item-wrapper">
+          <div class="our-workflow__item  our-workflow__item--flex-start">
+            <div class="our-workflow__icon">3</div>
+            <h3 class="our-workflow__subtitle">Работа</h3>
+            <div class="our-workflow__content  our-workflow__content--text-align-left">Рабочие максимально быстро прибывают на объект и выполняют оговоренную ранее работу</div>
+          </div>
+          <div class="our-workflow__item  our-workflow__item--flex-start">
+            <div class="our-workflow__icon  our-workflow__icon--intrinsic-style-item4">4</div>
+            <h3 class="our-workflow__subtitle">Расчёт</h3>
+            <div class="our-workflow__content  our-workflow__content--text-align-left">После выполнения работы грузчиками  происходит подсчёт отработанного времени, подписывается акт, происходит оплата работы</div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="our-services">
+    <section class="our-services"  id="our-services">
       <div class="container">
         <h2 class="our-services__title">- Наши услуги -</h2>
-        <div class="our-services__item">
-          <img src="img/our-services-img-1-tablet@1x.jpg" width="225" height="218" alt="services-img">
-          <div class="our-services__item-content">
-            <h3 class="our-services__item-title">Переезды</h3>
-            <div class="our-services__item-content-inner">
-              <div class="our-services__item-cost">от <span>200</span> руб.</div>
-              <a href="#" class="btn  btn--reviews">Отзывы</a>
-              <a href="#" class="btn  btn--order">Заказать</a>
+        <div class="our-services__items">
+          <div class="our-services__item">
+            <div class="our-services__item-bg"></div>
+            <picture>
+              <source media="(min-width: 1170px)" srcset="img/our-services-img-1-desktop@1x.jpg 1x, img/our-services-img-1-desktop@2x.jpg 2x">
+              <img src="img/our-services-img-1-tablet@1x.jpg" srcset="img/our-services-img-1-tablet@2x.jpg" alt="services-img">
+            </picture>
+            <div class="our-services__item-content">
+              <h3 class="our-services__item-title">Переезды</h3>
+              <div class="our-services__item-content-inner">
+                <div class="our-services__item-cost">от <span>200</span> руб.</div>
+                <a href="https://vk.com/topic-71669111_33842798" class="btn  btn--reviews">Отзывы</a>
+                <a href="#" class="btn  btn--order">Заказать</a>
+                <div class="our-services__item-lead">
+                  Квартирные, офисные, дачные
+                  осуществляются от двух и более грузчиков и грузовым автомобилем от 1,5 тонн
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="our-services__item">
-          <img src="img/our-services-img-2-tablet@1x.jpg" width="225" height="218" alt="services-img">
-          <div class="our-services__item-content">
-            <h3 class="our-services__item-title">Складские работы</h3>
-            <div class="our-services__item-content-inner">
-              <div class="our-services__item-cost">от <span>130</span> руб.</div>
-              <a href="#" class="btn  btn--reviews">Отзывы</a>
-              <a href="#" class="btn  btn--order">Заказать</a>
+          <div class="our-services__item">
+            <div class="our-services__item-bg"></div>
+            <picture>
+              <source media="(min-width: 1170px)" srcset="img/our-services-img-2-desktop@1x.jpg 1x, img/our-services-img-2-desktop@2x.jpg 2x">
+              <img src="img/our-services-img-2-tablet@1x.jpg" srcset="img/our-services-img-2-tablet@2x.jpg" alt="services-img">
+            </picture>
+            <div class="our-services__item-content">
+              <h3 class="our-services__item-title">Складские работы</h3>
+              <div class="our-services__item-content-inner">
+                <div class="our-services__item-cost">от <span>130</span> руб.</div>
+                <a href="https://vk.com/topic-71669111_33842798" class="btn  btn--reviews">Отзывы</a>
+                <a href="#" class="btn  btn--order">Заказать</a>
+                <div class="our-services__item-lead">
+                  При заказе от одного и более грузчиков для разовой или постоянной работы, как правило на полный день
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="our-services__item">
-          <img src="img/our-services-img-3-tablet@1x.jpg" width="225" height="218" alt="services-img">
-          <div class="our-services__item-content">
-            <h3 class="our-services__item-title">Грузоперевозка</h3>
-            <div class="our-services__item-content-inner">
-              <div class="our-services__item-cost">от <span>400</span> руб.</div>
-              <a href="#" class="btn  btn--reviews">Отзывы</a>
-              <a href="#" class="btn  btn--order">Заказать</a>
+          <div class="our-services__item">
+            <div class="our-services__item-bg"></div>
+            <picture>
+              <source media="(min-width: 1170px)" srcset="img/our-services-img-3-desktop@1x.jpg 1x, img/our-services-img-3-desktop@2x.jpg 2x">
+              <img src="img/our-services-img-3-tablet@1x.jpg" srcset="img/our-services-img-3-tablet@2x.jpg" alt="services-img">
+            </picture>
+            <div class="our-services__item-content">
+              <h3 class="our-services__item-title">Грузоперевозка</h3>
+              <div class="our-services__item-content-inner">
+                <div class="our-services__item-cost">от <span>400</span> руб.</div>
+                <a href="https://vk.com/topic-71669111_33842798" class="btn  btn--reviews">Отзывы</a>
+                <a href="#" class="btn  btn--order">Заказать</a>
+                <div class="our-services__item-lead">
+                  Подразумевает перевозку или доставку груза с погрузо-разгрузочными работами или без них
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="order-block">
+    <section class="order-block"  id="order-block">
       <div class="container">
-        <section class="form-order">
-          <h2 class="form-order__title">- Желаете сделать заказ? -</h2>
-          <h3 class="form-order__subtitle">Напишите нам</h3>
-          <form action="" class="form-order__form">
-            <input type="text" class="form-order__name" placeholder="Ваше Имя">
-            <input type="email" class="form-order__email" placeholder="Ваш Email">
-            <input type="tel" class="form-order__tel" placeholder="Ваш номер телефона">
-            <textarea class="form-order__text" placeholder="Ваше сообщение"></textarea>
-            <button class="btn btn--form-order">отправить сообщение</button>
-          </form>
-        </section>
-        <section class="contacts">
-          <h2 class="contacts__title">Контакты</h2>
-          <div class="contacts__content">г. Новосибирск,   ул. Кубовая , 60<br>
-          Тел. +7(383)213-11-98<br>
-          E-mail: gruzchiki154@mail.ru</div>
-          <ul class="social-links">
-            <li class="social-links__item">
-              <a class="social-links__icon  social-links__icon--vk" href="#"><img src="img/vk-icon-white.svg"></a></li>
-            <li class="social-links__item">
-              <a class="social-links__icon  social-links__icon--inst" href="#"><img src="img/insta-icon-white.svg"></a></li>
-            <li class="social-links__item ">
-              <a class="social-links__icon  social-links__icon--fb" href="#"><img src="img/fb-icon-white.svg"></a></li>
-          </ul>
-          <div class="callback">
-            <div class="callback__content">Закажите  обратный звонок и мы ответим на все вопросы по телефону</div>
-            <button class="btn btn--callback">заказать  обратный звонок</button>
-          </div>
-        </section>
+        <div class="order-block__inner">
+          <section class="form-order">
+            <h2 class="form-order__title">- Желаете сделать заказ? -</h2>
+            <h3 class="form-order__subtitle">Напишите нам</h3>
+            <form action="mailer/smart.php" method="POST" class="form-order__form"  id="form-order">
+              <input type="text" class="form-order__name" name="user-name" placeholder="Ваше Имя" required>
+              <input type="email" class="form-order__email" name="user-email" placeholder="Ваш Email">
+              <input type="tel" class="form-order__tel" name="user-phone" placeholder="Ваш номер телефона" required>
+              <textarea class="form-order__text" name="user-message" placeholder="Ваше сообщение"></textarea>
+              <button type="submit" class="btn btn--form-order">отправить сообщение</button>
+            </form>
+          </section>
+          <section class="contacts">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__content">г. Новосибирск,   ул. Кубовая , 60<br>
+            Тел. +7(383)213-11-98<br>
+            E-mail: gruzchiki154@mail.ru</div>
+            <ul class="social-links">
+              <li class="social-links__item">
+                <a class="social-links__icon  social-links__icon--vk" href="https://vk.com/gruzchiki_154">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/vk-icon-white.svg">
+                    <img src="img/vk-icon-white.svg" alt="vk-icon">
+                  </picture>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__icon  social-links__icon--inst" href="https://www.instagram.com/gruzchik_nsk/">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/insta-icon-white.svg">
+                    <img src="img/insta-icon-white.svg" alt="inst-icon">
+                  </picture>
+                </a>
+              </li>
+              <li class="social-links__item">
+                <a class="social-links__icon  social-links__icon--fb" href="https://ru-ru.facebook.com/people/%D0%93%D1%80%D1%83%D0%B7%D1%87%D0%B8%D0%BA%D0%B8-%D0%9F%D1%80%D0%BE%D1%84%D0%B8/100011414313630">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/fb-icon-white.svg">
+                    <img src="img/fb-icon-white.svg" alt="fb-icon">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+            <div class="callback">
+              <div class="callback__content">Закажите  обратный звонок и мы ответим на все вопросы по телефону</div>
+              <button class="btn btn--callback">заказать  обратный звонок</button>
+            </div>
+          </section>
+        </div>
       </div>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__copyright">
-    <div class="main-footer__copyright-icon">
-      <img src="img/copyright.svg" alt="copyright-icon">
+    <div class="main-nav">
+      <div class="main-nav__inner  main-nav__inner--footer">
+        <ul class="main-nav__list  main-nav__list--footer">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="#our-workflow">О нас</a></li>
+          <li><a href="#our-services">Услуги</a></li>
+          <li><a href="https://vk.com/topic-71669111_33842798">Отзывы</a></li>
+          <li><a href="#order-block">Контакты</a></li>
+        </ul>
+        <div class="main-footer__copyright">
+          <div class="main-footer__copyright-icon">
+            <picture>
+              <source media="(min-width: 1170px)" srcset="img/copyright.svg">
+              <source media="(min-width: 768px)" srcset="img/copyright.svg">
+              <img src="img/copyright.svg" width="11" height="11" alt="copyright-icon">
+            </picture>
+          </div>
+          Грузчики.nsk, 2013 - 2017
+        </div>
+        <a href="index.html" class="logo  logo--footer">
+          <picture>
+            <source media="(min-width: 1170px)" srcset="img/logo.svg">
+            <source media="(min-width: 768px)" srcset="img/logo.svg">
+            <img src="img/logo.svg" width="74" height="7" alt="logo">
+          </picture>
+        </a>
+      </div>
     </div>
-    Грузчики.nsk, 2013 - 2017</div>
-    <div class="logo logo--footer">
-      <a href="index.html">
-        <img src="img/logo.svg" width="74" height="7" alt="logo">
-      </a>
-  </div>
   </footer>
+  <div class="modal__bg">
+    <div class="modal">
+      <div class="modal__close">x</div>
+      <p>
+        Введите в форме заказа ваше имя и номер телефона.
+      </p>
+      <p>
+        И мы вам перезвоним в ближайшее время.
+      </p>
+    </div>
+  </div>
   <script src ="js/script.js"></script>
-  <script type="text/javascript">
-    $(function(){
-      $("a[href^='#preferances']").click(function(event){
-        event.preventDefault();
-        var _href = $(this).attr("href");
-        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
-        return false;
-      });
-    });
-</script>
-</body>
+  </body>
 </html>

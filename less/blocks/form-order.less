@@ -33,6 +33,7 @@
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 8px;
+  padding-right: 8px;
   margin-bottom: 7px;
 
   line-height: 10px;
@@ -59,4 +60,70 @@
 .form-order__text {
   min-height: 68px;
   margin-bottom: 20px;
+}
+
+@media @tablet-widths {
+
+  .form-order {
+    width: 520px;
+    padding-top: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 55px;
+    margin: 0 auto;
+  }
+
+  .form-order__title {
+    margin-top: 5px;
+    margin-bottom: 14px;
+
+    font-size: 24px;
+  }
+
+  .form-order__subtitle {
+    margin-bottom: 28px;
+    font-size: 18px;
+  }
+
+  .form-order__name,
+  .form-order__email,
+  .form-order__tel,
+  .form-order__text {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 9px;
+    padding-right: 9px;
+    margin-bottom: 19px;
+
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .form-order__text {
+    min-height: 120px;
+    margin-bottom: 28px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .form-order {
+    height: 547px;
+    padding-top: 25px;
+    margin: 0;
+  }
+
+  .form-order__title {
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+
+  .form-order__subtitle {
+    margin-bottom: 17px;
+    font-size: 16px;
+  }
+
 }

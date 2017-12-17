@@ -63,3 +63,163 @@
   text-align: center;
   color: @grey-color;
 }
+
+.preferances__img {
+  display: none;
+}
+
+@media @tablet-widths {
+
+  .preferances {
+    padding-top: 22px;
+    padding-bottom: 66px;
+  }
+
+  .preferances__title {
+    margin-bottom: 18px;
+
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .preferances__wrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  .preferances__items {
+    width: 50%;
+  }
+
+  .preferances__img {
+    display: block;
+    width: 50%;
+    margin-top: 2px;
+  }
+
+  .preferances__item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .preferances__item-icon {
+    width: 42px;
+    margin: 0;
+    margin-top: 7px;
+    margin-right: 20px;
+
+    &--stopwatch {
+      height: 50px;
+
+      background-image: url(../img/big-stopwatch-color.svg);
+      background-size: 42px 50px;
+    }
+
+    &--medal {
+      height: 55px;
+
+      background-image: url(../img/medal-color.svg);
+      background-size: 42px 55px;
+    }
+
+    &--diploma {
+      height: 51px;
+
+      background-image: url(../img/diploma-color.svg);
+      background-size: 42px 51px;
+    }
+  }
+
+  .preferances__subtitle {
+    margin-bottom: 2px;
+
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+    letter-spacing: 1.4px;
+  }
+
+  .preferances__content {
+    width: 248px;
+    margin: 0;
+    margin-bottom: 31px;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: left;
+    color: @grey-color;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .preferances {
+    padding-top: 55px;
+    padding-bottom: 106px;
+  }
+
+  .preferances__title {
+    margin-bottom: 40px;
+
+    font-size: 30px;
+    line-height: 45px;
+  }
+
+  .preferances__wrapper {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  .preferances__items {
+    width: auto;
+    margin: 0 auto;
+    margin-left: 70px;
+    margin-top: 35px;
+  }
+
+  .preferances__item-icon {
+    width: 42px;
+    margin: 0;
+    margin-top: 9px;
+    margin-right: 32px;
+  }
+
+  .preferances__subtitle {
+    margin-bottom: 10px;
+
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 1.8px;
+  }
+
+  .preferances__content {
+    width: 343px;
+    margin: 0;
+    margin-bottom: 65px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .preferances__img {
+    display: block;
+    width: auto;
+    margin-top: 2px;
+  }
+
+}
