@@ -620,12 +620,12 @@ img {
   }
   .main-nav__list a {
     display: block;
-    padding-bottom: 7px;
+    padding-bottom: 5px;
     font-weight: 800;
     font-size: 12px;
     line-height: 12px;
     text-transform: lowercase;
-    transition-delay: 0.2s;
+    border-bottom: 2px solid transparent;
   }
   .main-nav__list a:hover {
     padding-bottom: 5px;
@@ -1454,7 +1454,7 @@ img {
 @media (min-width: 1170px) {
   .our-workflow {
     padding-top: 50px;
-    padding-bottom: 48px;
+    padding-bottom: 50px;
   }
   .our-workflow__title {
     margin-bottom: 44px;
@@ -1583,7 +1583,9 @@ img {
   .preferances__img {
     display: block;
     width: 50%;
-    margin-top: 2px;
+    height: 444px;
+    padding-top: 1px;
+    overflow: hidden;
   }
   .preferances__item {
     display: -moz-flex;
@@ -1680,7 +1682,8 @@ img {
   .preferances__img {
     display: block;
     width: auto;
-    margin-top: 2px;
+    height: 602px;
+    padding-top: 1px;
   }
 }
 .social-links {
