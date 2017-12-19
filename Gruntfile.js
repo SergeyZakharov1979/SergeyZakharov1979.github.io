@@ -51,11 +51,15 @@ module.exports = function(grunt) {
     watch: {
       html: {
         files: ["*.html"],
-        tasks: ["copy:html"]
+        tasks: ["copy:html", "htmlmin"]
       },
       style: {
         files: ["less/**/*.less"],
         tasks: ["less", "postcss", "cssmin"]
+      },
+      js: {
+        files: ["js/**/*.js"],
+        tasks: ["copy:js", "concat", "uglify"]
       }
     },
 
@@ -68,6 +72,36 @@ module.exports = function(grunt) {
           dest: "build/css",
           ext: ".min.css"
         }]
+      }
+    },
+
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          "build/index.html": "build/index.html"
+        }
+      }
+    },
+
+    concat: {
+      options: {
+        separator: ";"
+      },
+      dist: {
+        src: ["build/js/picturefill.js", "build/js/script.js"],
+        dest: "build/js/script.js"
+      }
+    },
+
+    uglify: {
+      my_target: {
+        files: {
+          "build/js/script.min.js": ["build/js/script.js"]
+        }
       }
     },
 
@@ -103,13 +137,19 @@ module.exports = function(grunt) {
           src: ["*.html"],
           dest: "build"
         }]
+      },
+      js: {
+        files: [{
+          expand: true,
+          src: ["*js/**"],
+          dest: "build"
+        }]
       }
     },
 
     clean: {
       build: ["build"]
     }
-
 
   });
 
@@ -119,7 +159,10 @@ module.exports = function(grunt) {
     "copy",
     "less",
     "postcss",
+    "concat",
+    "uglify",
     "cssmin",
-    "imagemin"
+    "imagemin",
+    "htmlmin"
   ]);
 };
