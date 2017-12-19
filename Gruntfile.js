@@ -7,7 +7,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "css/style.css": "less/style.less"
+          "build/css/style.css": "less/style.less"
         }
       }
     },
@@ -24,7 +24,7 @@ module.exports = function(grunt) {
             })
           ]
         },
-        src: "css/*.css"
+        src: "build/css/*.css"
       }
     },
 
@@ -32,13 +32,13 @@ module.exports = function(grunt) {
       server: {
         bsFiles: {
           src: [
-            "*.html",
-            "css/*.css",
-            "js/*.js"
+            "build/*.html",
+            "build/css/*.css",
+            "build/js/*.js"
           ]
         },
         options: {
-          server: ".",
+          server: "build/",
           watchTask: true,
           notify: false,
           open: true,
@@ -49,38 +49,77 @@ module.exports = function(grunt) {
     },
 
     watch: {
+      html: {
+        files: ["*.html"],
+        tasks: ["copy:html"]
+      },
       style: {
         files: ["less/**/*.less"],
-        tasks: ["less", "postcss"]
+        tasks: ["less", "postcss", "cssmin"]
       }
     },
 
-    csso: {
-      style: {
-        options: {
-          report: "gzip"
-        },
-        files: {
-          "css/style.min.css" : ["css/style.css"]
-        }
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: "build/css",
+          src: ["*.css", "!*.min.css"],
+          dest: "build/css",
+          ext: ".min.css"
+        }]
       }
     },
 
     imagemin: {
       images: {
         options: {
-          optimizationLevel: 3,
+          optimisationLevel: 3,
           progressive: true
         },
         files: [{
           expand: true,
-          src: ["img/**/*.{png,jpg,gif}"]
+          src: ["build/img/**/*.{png,jpg,gif}"]
         }]
       }
+    },
+
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          src: [
+            "fonts/**/*.{woff,woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      },
+      html: {
+        files: [{
+          expand: true,
+          src: ["*.html"],
+          dest: "build"
+        }]
+      }
+    },
+
+    clean: {
+      build: ["build"]
     }
+
+
   });
 
-
-
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "postcss",
+    "cssmin",
+    "imagemin"
+  ]);
 };
